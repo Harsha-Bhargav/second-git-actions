@@ -7,6 +7,6 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v4.1.1     
       - name: Install dependencies
-        run: nmp ci
+        run: npm ci
       - name: Run tests
         run: nmp test
