@@ -1,4 +1,4 @@
-name: Test Project Workflow
+name: Test_Project_Workflow
 on: push
 jobs:
   test:
@@ -12,7 +12,7 @@ jobs:
         run: npm test
     
   deploy:
-    needs: (Test Project Workflow)
+    needs: Test_Project_Workflow
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -22,4 +22,4 @@ jobs:
       - name: Build project
         run: npm run build
       - name: deploy
-        run: echo 'Deploying'
+        run: echo 'Deploying updates'
