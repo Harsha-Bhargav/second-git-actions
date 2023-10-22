@@ -1,0 +1,12 @@
+name: Test Project Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4.1.1     
+      - name: Install dependencies
+        run: nmp ci
+      - name: Run tests
+        run: nmp test
